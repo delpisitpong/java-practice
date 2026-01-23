@@ -17,7 +17,6 @@ void main() {
                 JOptionPane.showMessageDialog(null, "END PROGRAM");
                 break;
             }
-
             try {
                 int borrow_or_return = Integer.parseInt(input);
 
@@ -45,7 +44,6 @@ void main() {
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Please enter only 1 or 2");
             }
-
         } else {
             JOptionPane.showMessageDialog(null, "END PROGRAM");
             validInput = true;

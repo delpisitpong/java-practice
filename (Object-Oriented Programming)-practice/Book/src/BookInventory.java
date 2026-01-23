@@ -10,23 +10,19 @@ void main() {
             showEndMessage();
             return;
         }
-
         String input_totalStr = JOptionPane.showInputDialog("Enter the total number for: " + input_title);
 
         if (input_totalStr == null) {
             showEndMessage();
             return;
         }
-
         try {
             int input_totalBook = Integer.parseInt(input_totalStr);
-
             books[i] = new Book(input_title, input_totalBook);
 
             IO.println(books[i].getTitle() +
                     " has " + books[i].getTotalBook() +
                     " books, can borrow " + books[i].getAvailableBook() + " books.");
-
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Invalid number! Please try again.");
             i--;
