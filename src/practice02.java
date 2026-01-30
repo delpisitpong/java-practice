@@ -16,19 +16,13 @@ void main() {
                 for (int i = 1; i < parts.length; i++) {
                     lastName.append(parts[i].toUpperCase()).append(" ");
                 }
-
-                String formattedFirstName = firstName.substring(0, 1).toUpperCase() +
-                        firstName.substring(1).toLowerCase();
-
+                String formattedFirstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
                 JOptionPane.showMessageDialog(null,
                         "Welcome, " + formattedFirstName + " " + lastName.toString().trim());
-
                 valid = true;
-
             } else {
                 JOptionPane.showMessageDialog(null,
                         "Invalid format. Please enter [First Name][Space][Last Name].");
-
             }
         }
     }

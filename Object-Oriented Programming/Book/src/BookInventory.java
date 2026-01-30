@@ -19,7 +19,6 @@ void main() {
         try {
             int input_totalBook = Integer.parseInt(input_totalStr);
             books[i] = new Book(input_title, input_totalBook);
-
             IO.println(books[i].getTitle() +
                     " has " + books[i].getTotalBook() +
                     " books, can borrow " + books[i].getAvailableBook() + " books.");

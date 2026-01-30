@@ -5,13 +5,11 @@ public class Student {
 
     public void doHomework(int point) {
         score += point;
-
         System.out.println(name + " did homework " + point + " points");
     }
 
     public void takeExam(int point) {
         score += point;
-
         System.out.println(name + " took exam " + point + " points");
     }
 
@@ -29,6 +27,6 @@ public class Student {
         System.out.println("Student ID: " + id);
         System.out.println("Score     : " + score);
         System.out.println("Result    : " + getResult());
-        System.out.println("------------------------------");
+        System.out.println("==============================");
     }
 }

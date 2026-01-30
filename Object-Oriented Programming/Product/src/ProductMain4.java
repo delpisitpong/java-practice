@@ -10,32 +10,30 @@ public static void setting_product(Product... products) {
         products[i].quantity = quantities[i];
     }
 }
+
 void main() {
     Product[] products = new Product[4];
     setting_product(products);
-
     IO.println("welcome to MINI SHOP!!");
-    IO.println("--------------------------------------------------");
+    IO.println("==================================================");
     IO.println("Press [1] to buy Pens (items = " + products[0].quantity + ")");
     IO.println("Press [2] to buy Pencils (items = " + products[1].quantity + ")");
     IO.println("Press [3] to buy Markers (items = " + products[2].quantity + ")");
     IO.println("Press [4] to buy Highlighters (items = " + products[3].quantity + ")");
-    IO.println("--------------------------------------------------");
-
+    IO.println("==================================================");
     Scanner sc = new Scanner(System.in);
-
     IO.print("Enter a number: ");
     int amount = sc.nextInt();
 
     while (true) {
         if (amount == 1) {
-            IO.println("--------------------------------------------------");
+            IO.println("==================================================");
             IO.print("How many Pens do you want to buy? ");
             int buy = sc.nextInt();
 
             if (buy <= 20) {
                 products[0].sell(buy);
-                IO.println("--------------------------------------------------");
+                IO.println("==================================================");
                 products[0].showInfo();
             } else {
                 IO.println("""
@@ -47,13 +45,13 @@ void main() {
             }
             break;
         } else if (amount == 2) {
-            IO.println("--------------------------------------------------");
+            IO.println("==================================================");
             IO.print("How many Pencils do you want to buy? ");
             int buy = sc.nextInt();
 
             if (buy <= 35) {
                 products[1].sell(buy);
-                IO.println("--------------------------------------------------");
+                IO.println("==================================================");
                 products[1].showInfo();
             } else {
                 IO.println("""
@@ -65,13 +63,13 @@ void main() {
             }
             break;
         } else if (amount == 3) {
-            IO.println("--------------------------------------------------");
+            IO.println("==================================================");
             IO.print("How many Markers do you want to buy? ");
             int buy = sc.nextInt();
 
             if (buy <= 10) {
                 products[2].sell(buy);
-                IO.println("--------------------------------------------------");
+                IO.println("==================================================");
                 products[2].showInfo();
             } else {
                 IO.println("""
@@ -83,13 +81,13 @@ void main() {
             }
             break;
         } else if (amount == 4) {
-            IO.println("--------------------------------------------------");
+            IO.println("==================================================");
             IO.print("How many Highlighters do you want to buy? ");
             int buy = sc.nextInt();
 
             if (buy <= 40) {
                 products[3].sell(buy);
-                IO.println("--------------------------------------------------");
+                IO.println("==================================================");
                 products[3].showInfo();
             } else {
                 IO.println("""

@@ -10,9 +10,9 @@ public static void setting_product(Product... products) {
         products[i].quantity = quantities[i];
     }
 }
+
 void main() {
     Product[] products = new Product[4];
-
     setting_product(products);
 
     for (Product product : products) {
@@ -20,6 +20,6 @@ void main() {
         IO.println("Price : " + product.price + " Baht/Item");
         IO.println("Stock : " + product.quantity + " Item");
         IO.println("Stock Value : " + product.stockValue() + " Baht");
-        IO.println("-------------------------");
+        IO.println("==============================");
     }
 }

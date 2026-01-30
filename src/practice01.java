@@ -7,6 +7,7 @@ void main() {
     while (!validInput) {
         try {
             String input1 = JOptionPane.showInputDialog("Input first number:");
+
             if (input1 == null) {
                 JOptionPane.showMessageDialog(null, "Error, Closed program");
                 return;
@@ -17,17 +18,17 @@ void main() {
             JOptionPane.showMessageDialog(null, "Enter number only!");
         }
     }
-
     String operation = JOptionPane.showInputDialog("Enter operation (+, -, *, /):");
+
     if (operation == null) {
         JOptionPane.showMessageDialog(null, "Error, Closed program");
         return;
     }
-
     validInput = false;
     while (!validInput) {
         try {
             String input2 = JOptionPane.showInputDialog("Input second number:");
+
             if (input2 == null) {
                 JOptionPane.showMessageDialog(null, "Error, Closed program");
                 return;
@@ -38,8 +39,8 @@ void main() {
             JOptionPane.showMessageDialog(null, "Enter number only!");
         }
     }
-
     double result;
+
     switch (operation) {
         case "+":
             result = firstNumber + secondNumber;
@@ -61,9 +62,8 @@ void main() {
             JOptionPane.showMessageDialog(null, "Wrong operation");
             return;
     }
+    DecimalFormat df = new DecimalFormat("#,###.00");
 
-    DecimalFormat df = new DecimalFormat("#,##0.00");
     JOptionPane.showMessageDialog(null,
             firstNumber + " " + operation + " " + secondNumber + " = " + df.format(result));
-
 }

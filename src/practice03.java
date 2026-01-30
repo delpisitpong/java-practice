@@ -3,7 +3,6 @@ import javax.swing.*;
 void main() {
     final String USERNAME = "admin";
     final String PASSWORD = "Admin1234";
-
     boolean loginSuccess = false;
 
     while (!loginSuccess) {
@@ -14,19 +13,16 @@ void main() {
                 && inputPass != null
                 && inputUser.equalsIgnoreCase(USERNAME)
                 && inputPass.equals(PASSWORD)) {
-
             JOptionPane.showMessageDialog(null,
                     "Login Success!!",
                     "Message",
                     JOptionPane.INFORMATION_MESSAGE);
             loginSuccess = true;
-
         } else {
             JOptionPane.showMessageDialog(null,
                     "Login Fail...",
                     "Incorrect username or password",
                     JOptionPane.ERROR_MESSAGE);
-
         }
     }
 }

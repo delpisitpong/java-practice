@@ -7,7 +7,6 @@ void main() {
 
     while (true) {
         int sum = 0;
-
         int start = JOptionPane.showConfirmDialog(null,
                 "Do you want to order menu?",
                 "Yakitori Shop",
@@ -16,9 +15,7 @@ void main() {
         if (start == JOptionPane.NO_OPTION) {
             JOptionPane.showMessageDialog(null, "END PROGRAM!!");
             break;
-
         }
-
         while (true) {
             int input = Integer.parseInt(JOptionPane.showInputDialog("""
                     Yakitori Menu
@@ -30,24 +27,16 @@ void main() {
 
             switch (input) {
                 case 1 -> sum += Chicken_Wing;
-
                 case 2 -> sum += Pork_with_Leek;
-
                 case 3 -> sum += Beef_Tongue;
-
                 case 0 -> JOptionPane.showMessageDialog(null,
                         "Total price is " + sum + " Baht.");
-
                 default -> JOptionPane.showMessageDialog(null,
                         "Invalid menu number. Please try again.");
-
             }
-
             if (input == 0) {
                 break;
-
             }
-
         }
     }
 }
