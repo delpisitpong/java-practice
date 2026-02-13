@@ -1,4 +1,4 @@
-public class Brownie extends Bakery{
+public class Brownie extends Bakery {
     private boolean isFudgy;
     private final int piece;
 
