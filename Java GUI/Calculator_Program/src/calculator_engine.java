@@ -2,22 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.text.DecimalFormat;
 
-public class Calculator_Program {
-    private JPanel cal_prog;
-    private JButton cal_basic;
-    private JButton cal_avg;
-    private JPanel basic_cal_panel;
-    private JPanel find_avg_panel;
-    private JLabel basic_cal_des;
-    private JLabel avg_cal_des;
-    private JButton convert_unit;
-    private JButton cal_financial;
-    private JPanel unit_convert;
-    private JLabel unit_convert_des;
-    private JPanel financial_mode;
-    private JLabel financial_mode_des;
-
-    public  Calculator_Program() {
+public class calculator_engine extends calculator_program {
+    public calculator_engine() {
         JFrame frame = new JFrame();
         frame.setContentPane(cal_prog);
         frame.getContentPane().setBackground(Color.decode("#000000"));
@@ -27,11 +13,11 @@ public class Calculator_Program {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-        // ====================================================================================================
+        // ======================================================================================================================================================
         // BASIC CALCULATION
-        // ====================================================================================================
+        // ======================================================================================================================================================
         cal_basic.addActionListener(_ -> {
-            DecimalFormat df = new DecimalFormat("#,###.###");
+            DecimalFormat df = new DecimalFormat("#,###.00");
 
             while (true) {
                 try {
@@ -97,9 +83,9 @@ public class Calculator_Program {
             }
         });
 
-        // ====================================================================================================
+        // ======================================================================================================================================================
         // FIND AVERAGE
-        // ====================================================================================================
+        // ======================================================================================================================================================
         cal_avg.addActionListener(_ -> {
             double sum = 0;
             int count = 0;
@@ -163,9 +149,9 @@ public class Calculator_Program {
             }
         });
 
-        // ====================================================================================================
+        // ======================================================================================================================================================
         // UNIT CONVERTER
-        // ====================================================================================================
+        // ======================================================================================================================================================
         convert_unit.addActionListener(_ -> {
             double celsius = 0;
             boolean validInput = false;
@@ -196,9 +182,9 @@ public class Calculator_Program {
             }
         });
 
-        // ====================================================================================================
+        // ======================================================================================================================================================
         // VAT CALCULATION
-        // ====================================================================================================
+        // ======================================================================================================================================================
         cal_financial.addActionListener(_ -> {
             double amount = 0;
             boolean validInput = false;
