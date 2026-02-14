@@ -5,10 +5,16 @@ public class Calculator_Program {
     private JPanel cal_prog;
     private JButton cal_basic;
     private JButton cal_avg;
-    private JPanel basic_cal;
-    private JPanel avg_cal;
+    private JPanel basic_cal_panel;
+    private JPanel find_avg_panel;
     private JLabel basic_cal_des;
     private JLabel avg_cal_des;
+    private JButton convert_unit;
+    private JButton cal_financial;
+    private JPanel unit_convert;
+    private JLabel unit_convert_des;
+    private JPanel financial_mode;
+    private JLabel financial_mode_des;
 
     public  Calculator_Program() {
         JFrame frame = new JFrame();
@@ -19,71 +25,70 @@ public class Calculator_Program {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         cal_basic.addActionListener(_ -> {
-            double firstNumber = 0, secondNumber = 0;
-            boolean validInput = false;
+            DecimalFormat df = new DecimalFormat("#,###.###");
 
-            while (!validInput) {
+            while (true) {
                 try {
-                    String input1 = JOptionPane.showInputDialog("Input first number:");
+                    String input1 = JOptionPane.showInputDialog(null,
+                            "Enter first number:\n(Or press Cancel to exit)",
+                            "Basic Mode", JOptionPane.QUESTION_MESSAGE);
+                    if (input1 == null) break;
+                    double num1 = Double.parseDouble(input1);
 
-                    if (input1 == null) {
-                        JOptionPane.showMessageDialog(null, "Error, Closed program");
-                        return;
+                    String[] operations = {"+", "-", "*", "/"};
+                    String op = (String) JOptionPane.showInputDialog(null,
+                            "Select Operation:",
+                            "Basic Mode",
+                            JOptionPane.QUESTION_MESSAGE, null, operations, operations[0]);
+                    if (op == null) break;
+
+                    String input2 = JOptionPane.showInputDialog(null,
+                            "Enter second number:",
+                            "Basic Mode",
+                            JOptionPane.QUESTION_MESSAGE);
+                    if (input2 == null) break;
+                    double num2 = Double.parseDouble(input2);
+
+                    if (op.equals("/") && num2 == 0) {
+                        JOptionPane.showMessageDialog(null,
+                                "Error: Cannot divide by zero!",
+                                "Math Error",
+                                JOptionPane.ERROR_MESSAGE);
+                        continue;
                     }
-                    firstNumber = Double.parseDouble(input1);
-                    validInput = true;
-                } catch (NumberFormatException nfe) {
-                    JOptionPane.showMessageDialog(null, "Enter number only!");
+
+                    double result = switch (op) {
+                        case "+" -> num1 + num2;
+                        case "-" -> num1 - num2;
+                        case "*" -> num1 * num2;
+                        case "/" -> num1 / num2;
+                        default -> 0;
+                    };
+
+                    JOptionPane.showMessageDialog(null,
+                            num1 + " " + op + " " + num2 + " = " + df.format(result),
+                            "Result",
+                            JOptionPane.INFORMATION_MESSAGE);
+
+                    int choice = JOptionPane.showConfirmDialog(null,
+                            "Do you want to calculate another?",
+                            "Continue?",
+                            JOptionPane.YES_NO_OPTION);
+                    if (choice != JOptionPane.YES_OPTION) break;
+
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null,
+                            "Invalid input! Please enter numbers only.",
+                            "Input Error",
+                            JOptionPane.ERROR_MESSAGE);
                 }
             }
-            String operation = JOptionPane.showInputDialog("Enter operation (+, -, *, /):");
 
-            if (operation == null) {
-                JOptionPane.showMessageDialog(null, "Error, Closed program");
-                return;
+            // Refresh the main UI to clear any visual artifacts after closing the dialog
+            if (cal_prog != null) {
+                cal_prog.revalidate(); // Recalculate the layout
+                cal_prog.repaint();    // Redraw the components
             }
-            validInput = false;
-            while (!validInput) {
-                try {
-                    String input2 = JOptionPane.showInputDialog("Input second number:");
-
-                    if (input2 == null) {
-                        JOptionPane.showMessageDialog(null, "Error, Closed program");
-                        return;
-                    }
-                    secondNumber = Double.parseDouble(input2);
-                    validInput = true;
-                } catch (NumberFormatException nfe) {
-                    JOptionPane.showMessageDialog(null, "Enter number only!");
-                }
-            }
-            double result;
-
-            switch (operation) {
-                case "+":
-                    result = firstNumber + secondNumber;
-                    break;
-                case "-":
-                    result = firstNumber - secondNumber;
-                    break;
-                case "*":
-                    result = firstNumber * secondNumber;
-                    break;
-                case "/":
-                    if (secondNumber == 0) {
-                        JOptionPane.showMessageDialog(null, "Can not divided by Zero!");
-                        return;
-                    }
-                    result = firstNumber / secondNumber;
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Wrong operation");
-                    return;
-            }
-            DecimalFormat df = new DecimalFormat("#,###.00");
-
-            JOptionPane.showMessageDialog(null,
-                    firstNumber + " " + operation + " " + secondNumber + " = " + df.format(result));
         });
         cal_avg.addActionListener(_ -> {
             double sum = 0;
@@ -140,10 +145,80 @@ public class Calculator_Program {
                         "Result",
                         JOptionPane.INFORMATION_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(null,
-                        "No data to calculate.",
-                        "Canceled",
-                        JOptionPane.WARNING_MESSAGE);
+                System.out.println("User cancelled or no data.");
+            }
+
+            // Refresh the main UI to clear any visual artifacts after closing the dialog
+            if (cal_prog != null) {
+                cal_prog.revalidate(); // Recalculate the layout
+                cal_prog.repaint();    // Redraw the components
+            }
+        });
+        convert_unit.addActionListener(_ -> {
+            double celsius = 0;
+            boolean validInput = false;
+            DecimalFormat df = new DecimalFormat("#,###.00");
+
+            while (!validInput) {
+                try {
+                    String input = JOptionPane.showInputDialog("Enter Temperature in Celsius (°C):");
+                    if (input == null) return;
+
+                    celsius = Double.parseDouble(input);
+                    validInput = true;
+                } catch (NumberFormatException nfe) {
+                    JOptionPane.showMessageDialog(null,
+                            "Please enter a valid number!");
+                }
+            }
+
+            double fahrenheit = (celsius * 9 / 5) + 32;
+
+            JOptionPane.showMessageDialog(null,
+                    celsius + " °C is equal to " + df.format(fahrenheit) + " °F");
+
+            // Refresh the main UI to clear any visual artifacts after closing the dialog
+            if (cal_prog != null) {
+                cal_prog.revalidate(); // Recalculate the layout
+                cal_prog.repaint();    // Redraw the components
+            }
+        });
+        cal_financial.addActionListener(_ -> {
+            double amount = 0;
+            boolean validInput = false;
+            DecimalFormat df = new DecimalFormat("#,###.00");
+
+            while (!validInput) {
+                try {
+                    String input = JOptionPane.showInputDialog("Enter Product Price (Exclude VAT):");
+                    if (input == null) return;
+
+                    amount = Double.parseDouble(input);
+                    if (amount < 0) throw new NumberFormatException();
+
+                    validInput = true;
+                } catch (NumberFormatException nfe) {
+                    JOptionPane.showMessageDialog(null,
+                            "Please enter a valid positive price!");
+                }
+            }
+
+            double vat = amount * 0.07;
+            double total = amount + vat;
+
+            String message = "Price: " + df.format(amount) + "\n" +
+                    "VAT (7%): " + df.format(vat) + "\n" +
+                    "Total: " + df.format(total);
+
+            JOptionPane.showMessageDialog(null,
+                    message,
+                    "Financial Result",
+                    JOptionPane.INFORMATION_MESSAGE);
+
+            // Refresh the main UI to clear any visual artifacts after closing the dialog
+            if (cal_prog != null) {
+                cal_prog.revalidate(); // Recalculate the layout
+                cal_prog.repaint();    // Redraw the components
             }
         });
     }
