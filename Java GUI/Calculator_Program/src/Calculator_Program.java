@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.text.DecimalFormat;
 
 public class Calculator_Program {
@@ -19,11 +20,16 @@ public class Calculator_Program {
     public  Calculator_Program() {
         JFrame frame = new JFrame();
         frame.setContentPane(cal_prog);
+        frame.getContentPane().setBackground(Color.decode("#000000"));
         frame.setTitle("Calculator Program");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600,400);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+        // ====================================================================================================
+        // BASIC CALCULATION
+        // ====================================================================================================
         cal_basic.addActionListener(_ -> {
             DecimalFormat df = new DecimalFormat("#,###.###");
 
@@ -90,6 +96,10 @@ public class Calculator_Program {
                 cal_prog.repaint();    // Redraw the components
             }
         });
+
+        // ====================================================================================================
+        // FIND AVERAGE
+        // ====================================================================================================
         cal_avg.addActionListener(_ -> {
             double sum = 0;
             int count = 0;
@@ -144,8 +154,6 @@ public class Calculator_Program {
                                 "Average result: " + df.format(average),
                         "Result",
                         JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                System.out.println("User cancelled or no data.");
             }
 
             // Refresh the main UI to clear any visual artifacts after closing the dialog
@@ -154,6 +162,10 @@ public class Calculator_Program {
                 cal_prog.repaint();    // Redraw the components
             }
         });
+
+        // ====================================================================================================
+        // UNIT CONVERTER
+        // ====================================================================================================
         convert_unit.addActionListener(_ -> {
             double celsius = 0;
             boolean validInput = false;
@@ -183,6 +195,10 @@ public class Calculator_Program {
                 cal_prog.repaint();    // Redraw the components
             }
         });
+
+        // ====================================================================================================
+        // VAT CALCULATION
+        // ====================================================================================================
         cal_financial.addActionListener(_ -> {
             double amount = 0;
             boolean validInput = false;
@@ -223,6 +239,9 @@ public class Calculator_Program {
         });
     }
 
+    // ====================================================================================================
+    // MAIN METHOD
+    // ====================================================================================================
     static void main() {
         new Calculator_Program();
     }

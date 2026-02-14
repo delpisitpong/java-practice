@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="cal_prog" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="20" left="20" bottom="20" right="20"/>
     <constraints>
-      <xy x="20" y="20" width="443" height="400"/>
+      <xy x="20" y="20" width="443" height="361"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -14,10 +14,10 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-3025959"/>
+          <background color="-16777216"/>
         </properties>
         <border type="line">
-          <color color="-16777216"/>
+          <color color="-3025959"/>
         </border>
         <children>
           <component id="6510b" class="javax.swing.JLabel" binding="basic_cal_des">
@@ -25,8 +25,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <foreground color="-16777216"/>
-              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Basic Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #333333;'&gt;Standard Arithmetic&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Operations: +, -, *, /&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
+              <foreground color="-753665"/>
+              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Basic Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Standard Arithmetic&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Operations: +, -, *, /&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
             </properties>
           </component>
         </children>
@@ -37,10 +37,10 @@
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-3025959"/>
+          <background color="-16777216"/>
         </properties>
         <border type="line">
-          <color color="-16777216"/>
+          <color color="-3025959"/>
         </border>
         <children>
           <component id="398a7" class="javax.swing.JLabel" binding="avg_cal_des">
@@ -48,8 +48,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <foreground color="-16777216"/>
-              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Average Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #333333;'&gt;Statistical Mean&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Input multiple numbers&lt;br&gt;to find the average&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
+              <foreground color="-753665"/>
+              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Average Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Statistical Mean&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Input multiple numbers&lt;br&gt;to find the average&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
             </properties>
           </component>
         </children>
@@ -59,6 +59,8 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-3025959"/>
+          <foreground color="-16777216"/>
           <text value="Explore Solutions"/>
         </properties>
       </component>
@@ -67,6 +69,8 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-3025959"/>
+          <foreground color="-16777216"/>
           <text value="Explore Solutions"/>
         </properties>
       </component>
@@ -75,6 +79,8 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-3025959"/>
+          <foreground color="-16777216"/>
           <text value="Explore Solutions"/>
         </properties>
       </component>
@@ -83,6 +89,8 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-3025959"/>
+          <foreground color="-16777216"/>
           <text value="Explore Solutions"/>
         </properties>
       </component>
@@ -92,10 +100,10 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-3025959"/>
+          <background color="-16777216"/>
         </properties>
         <border type="line">
-          <color color="-16777216"/>
+          <color color="-3025959"/>
         </border>
         <children>
           <component id="747e6" class="javax.swing.JLabel" binding="unit_convert_des">
@@ -103,7 +111,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <foreground color="-16777216"/>
+              <foreground color="-753665"/>
               <text value="&lt;html&gt;&lt;div style='text-align: center;'&gt;&lt;b&gt;Unit Converter&lt;/b&gt;&lt;br&gt;&lt;i&gt;Measurement Conversion&lt;/i&gt;&lt;br&gt;&lt;br&gt;Easily convert units like&lt;br&gt;Length, Weight, or Temp&lt;/div&gt;&lt;/html&gt;"/>
             </properties>
           </component>
@@ -115,10 +123,10 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-3025959"/>
+          <background color="-16777216"/>
         </properties>
         <border type="line">
-          <color color="-16777216"/>
+          <color color="-3025959"/>
         </border>
         <children>
           <component id="1fd2a" class="javax.swing.JLabel" binding="financial_mode_des">
@@ -126,7 +134,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <foreground color="-16777216"/>
+              <foreground color="-753665"/>
               <text value="&lt;html&gt;&lt;div style='text-align: center;'&gt;&lt;b&gt;Financial Mode&lt;/b&gt;&lt;br&gt;&lt;i&gt;Tax &amp; Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;Calculate VAT, discounts,&lt;br&gt;or simple interest rates&lt;/div&gt;&lt;/html&gt;"/>
             </properties>
           </component>
