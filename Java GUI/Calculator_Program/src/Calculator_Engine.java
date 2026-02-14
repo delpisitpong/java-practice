@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.text.DecimalFormat;
 
-public class calculator_engine extends calculator_program {
-    public calculator_engine() {
+public class Calculator_Engine extends Calculator_Program {
+    public Calculator_Engine() {
         JFrame frame = new JFrame();
         frame.setContentPane(cal_prog);
         frame.getContentPane().setBackground(Color.decode("#000000"));

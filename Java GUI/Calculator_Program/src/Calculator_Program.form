@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="calculator_program">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Calculator_Program">
   <grid id="27dc6" binding="cal_prog" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="20" left="20" bottom="20" right="20"/>
     <constraints>
@@ -43,7 +43,7 @@
           <color color="-3025959"/>
         </border>
         <children>
-          <component id="398a7" class="javax.swing.JLabel" binding="avg_cal_des">
+          <component id="398a7" class="javax.swing.JLabel" binding="find_avg_des">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -112,7 +112,7 @@
             </constraints>
             <properties>
               <foreground color="-753665"/>
-              <text value="&lt;html&gt;&lt;div style='text-align: center;'&gt;&lt;b&gt;Unit Converter&lt;/b&gt;&lt;br&gt;&lt;i&gt;Measurement Conversion&lt;/i&gt;&lt;br&gt;&lt;br&gt;Easily convert units like&lt;br&gt;Length, Weight, or Temp&lt;/div&gt;&lt;/html&gt;"/>
+              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Unit Converter&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Measurement Coversion&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Easily convert units like &lt;br&gt;&#10;Length, Weight, or Temp&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
             </properties>
           </component>
         </children>
@@ -135,7 +135,7 @@
             </constraints>
             <properties>
               <foreground color="-753665"/>
-              <text value="&lt;html&gt;&lt;div style='text-align: center;'&gt;&lt;b&gt;Financial Mode&lt;/b&gt;&lt;br&gt;&lt;i&gt;Tax &amp; Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;Calculate VAT, discounts,&lt;br&gt;or simple interest rates&lt;/div&gt;&lt;/html&gt;"/>
+              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Financial Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Tax Interest&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Calculate Vat, discounts, &lt;br&gt;&#10;or simple interest rates&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
             </properties>
           </component>
         </children>
