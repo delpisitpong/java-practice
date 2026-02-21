@@ -21,6 +21,7 @@ public class BankMain extends BankService {
         System.out.println(Color.YELLOW + "Press[1] = Yes | Press[2] = No" + Color.RESET);
         System.out.println();
         line1();
+        System.out.println();
 
         BankAccount account = openAccount();
 
@@ -43,6 +44,7 @@ public class BankMain extends BankService {
                     handleWithdraw(sc, account);
 
                 } else if (choice == 3) {
+                    System.out.println();
                     line1();
                     System.out.println(Color.YELLOW
                             + "\n"

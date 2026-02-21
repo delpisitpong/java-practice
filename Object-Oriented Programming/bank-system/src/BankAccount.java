@@ -27,8 +27,4 @@ class BankAccount {
         System.out.println(Color.CYAN + "Withdraw successful! Current balance: " + Color.RESET + accountBalance);
         System.out.println();
     }
-
-    public  String getAccountName() {
-        return accountName;
-    }
 }

@@ -25,6 +25,7 @@ public class BankService extends Format{
                     return account;
 
                 } else if (choice == 2) {
+                    System.out.println();
                     line1();
                     System.out.println(Color.YELLOW
                             + "\n"
@@ -64,6 +65,7 @@ public class BankService extends Format{
     static void handleDeposit(Scanner sc, BankAccount account) {
         while (true) {
             try {
+                System.out.println();
                 line1();
                 System.out.println();
                 System.out.print("Enter your amount to deposit: ");
@@ -88,6 +90,7 @@ public class BankService extends Format{
 
         while (loop) {
             try {
+                System.out.println();
                 line1();
                 System.out.println();
                 System.out.print("Enter your amount to withdraw: ");
