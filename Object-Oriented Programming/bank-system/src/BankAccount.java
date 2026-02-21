@@ -12,7 +12,8 @@ class BankAccount {
             throw new BankException("The amount must be greater than 0.");
         }
         accountBalance += amount;
-        System.out.println("Deposit successful! Current balance: " + accountBalance);
+        System.out.println(Color.CYAN + "Deposit successful! Current balance: " + Color.RESET + accountBalance);
+        System.out.println();
     }
 
     public void withdraw(double amount) throws BankException {
@@ -23,6 +24,11 @@ class BankAccount {
             throw new BankException("Insufficient balance.");
         }
         accountBalance -= amount;
-        System.out.println("Withdraw successful! Current balance: " + accountBalance);
+        System.out.println(Color.CYAN + "Withdraw successful! Current balance: " + Color.RESET + accountBalance);
+        System.out.println();
+    }
+
+    public  String getAccountName() {
+        return accountName;
     }
 }
