@@ -112,7 +112,7 @@
             </constraints>
             <properties>
               <foreground color="-753665"/>
-              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Unit Converter&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Measurement Coversion&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Easily convert units like &lt;br&gt;&#10;Length, Weight, or Temp&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
+              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Unit Converter&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Measurement Coversion&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Easily convert units like &lt;br&gt;&#10;Temperature&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
             </properties>
           </component>
         </children>
@@ -135,7 +135,7 @@
             </constraints>
             <properties>
               <foreground color="-753665"/>
-              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Financial Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Tax Interest&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Calculate Vat, discounts, &lt;br&gt;&#10;or simple interest rates&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
+              <text value="&lt;html&gt;&#10;&lt;div style='text-align: center;'&gt;&#10;    &lt;b style='font-size: 14pt;'&gt;Financial Mode&lt;/b&gt;&lt;br&gt;&#10;    &lt;i style='color: #F47FFF;'&gt;Tax Interest&lt;/i&gt;&lt;br&gt;&#10;    &lt;hr&gt;&#10;    Calculate Vat&#10;&lt;/div&gt;&#10;&lt;/html&gt;"/>
             </properties>
           </component>
         </children>
